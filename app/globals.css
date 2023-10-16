@@ -3,25 +3,132 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
+  /* --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --background-end-rgb: 255, 255, 255; */
+  --logo-color: #4EC2E0;
+  --primary-background-color: #FFFFFF;
+  --secondary-background-color: #F2F2F2;
+  --primary-text-color: #333333;
+  --accent-color-1: #FFA07A;
+  --accent-color-2: #8A2BE2;
+  --accent-color-3: #00BFFF;
+  --highlight-color: #FFD700;
+  --border-color: #888888;
+
 }
 
-@media (prefers-color-scheme: dark) {
+.wrapper {
+  max-width: 1110px;
+}
+
+.footer-wave-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.footer-wave-top svg {
+  position: relative;
+  display: block;
+  width: calc(136% + 1.3px);
+  height: 204px;
+  transform: rotateY(180deg);
+}
+
+.footer-wave-top .shape-fill {
+  fill: #FFFFFF;
+}
+
+/** For tablet devices **/
+@media (min-width: 768px) and (max-width: 1023px) {
+  .footer-wave-top svg {
+    width: calc(127% + 1.3px);
+    height: 75px;
+  }
+}
+
+/** For mobile devices **/
+@media (max-width: 767px) {
+  .footer-wave-top svg {
+    width: calc(106% + 1.3px);
+    height: 33px;
+  }
+}
+
+.spacer {
+  aspect-ratio: 600/700;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.layer1 {
+  background-image: url('/layered-waves-mobile.svg');
+
+}
+
+@media (min-width: 600px) {
+  .spacer {
+    aspect-ratio: 960/300;
+  }
+
+  .layer1 {
+    background-image: url('/layered-waves-desktop.svg');
+
+  }
+}
+
+/* @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
+} */
+
+.header {
+  @apply bg-[#c0e6ff] sticky top-0 w-full;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.header>div {
+  @apply flex items-center justify-between p-4 px-8 mx-auto sticky;
+}
+
+.header .header__nav ul {
+  @apply flex gap-6 font-medium;
+}
+
+.healow_services__divs img {
+  opacity: 1;
+  transition: opacity 500ms ease-in-out;
+}
+
+.healow_services__divs:hover img {
+  opacity: 0;
+}
+
+.healow_services__divs .healow_services__divs__text {
+  @apply absolute top-0 w-full h-full flex flex-col justify-center gap-8 items-center px-16 rounded-lg text-center leading-relaxed;
+  opacity: 0;
+  transition: opacity 500ms ease-in-out;
+}
+
+.healow_services__divs:hover .healow_services__divs__text {
+  opacity: 1;
+}
+
+
+
+.footer {
+  @apply bg-[#2a3795] text-white;
+}
+
+.footer>div.wrapper {
+  @apply flex justify-between items-end py-12;
 }
