@@ -31,7 +31,7 @@ const TestimonialSlider = () => {
         >
 
             <SwiperSlide className="text-center">
-                <div className="pb-20 px-32">
+                <div className="pb-20 px-12 lg:px-32">
                     <p className="text-xl text-[#333333]">&quot;healow Aware has been a great experience, and is getting patients more engaged in their healthcare. We&apos;ve seen improvements in our UDS measures.&quot;</p>
                     <div className="mt-12">
                         <span className="block font-semibold text-xl mb-2">Anupriya</span>
@@ -39,8 +39,9 @@ const TestimonialSlider = () => {
                     </div>
                 </div>
             </SwiperSlide>
+
             <SwiperSlide className="text-center">
-                <div className="pb-20 px-32">
+                <div className="pb-20 px-12 lg:px-32">
                     <p className="text-xl text-[#333333]">&quot;healow Aware has been a great experience, and is getting patients more engaged in their healthcare. We&apos;ve seen improvements in our UDS measures.&quot;</p>
                     <div className="mt-12">
                         <span className="block font-semibold text-xl mb-2">Anupriya</span>
@@ -48,8 +49,9 @@ const TestimonialSlider = () => {
                     </div>
                 </div>
             </SwiperSlide>
+
             <SwiperSlide className="text-center">
-                <div className="pb-20 px-32">
+                <div className="pb-20 px-12 lg:px-32">
                     <p className="text-xl text-[#333333]">&quot;healow Aware has been a great experience, and is getting patients more engaged in their healthcare. We&apos;ve seen improvements in our UDS measures.&quot;</p>
                     <div className="mt-12">
                         <span className="block font-semibold text-xl mb-2">Anupriya</span>

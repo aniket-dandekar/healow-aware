@@ -7,6 +7,7 @@ import { Roboto } from 'next/font/google'
 import { FaArrowDown, FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa"
 import { FaArrowUpRightFromSquare } from "react-icons/fa6"
 import TestimonialSlider from "./testimonial-slider"
+import Nav from "./nav"
 
 const roboto = Roboto({
     subsets: ['latin'],
@@ -16,30 +17,7 @@ const roboto = Roboto({
 const Navbar = () => {
     return (
         <header className="header z-10">
-            <div className="wrapper">
-
-                <div className="header__logo">
-                    <Link href={'/'}>
-                        <Image priority={true} src={'/healow-aware-logo.png'} alt="healow-aware-logo" height={55} width={282}></Image>
-                    </Link>
-                </div>
-                <nav className="header__nav">
-                    <ul>
-                        <li>
-                            <Link className="hover:text-white transition-all duration-300" href={'/'}>Home</Link>
-                        </li>
-                        <li>
-                            <Link className="hover:text-white transition-all duration-300" href={'/'}>About us</Link>
-                        </li>
-                        <li>
-                            <Link className="hover:text-white transition-all duration-300" href={'/'}>Solutions for Startups</Link>
-                        </li>
-                        <li>
-                            <Link className="hover:text-white transition-all duration-300" href={'/'}>Contact Us</Link>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
+            <Nav />
         </header>
     )
 }
@@ -47,12 +25,12 @@ const Navbar = () => {
 const Hero = () => {
     return (
         <section id="hero" className={` hero relative p-8`}>
-            <div className="wrapper mx-auto py-24">
-                <h1 className={`text-8xl font-extrabold text-[#333333] mb-6 text-left ${roboto.className}`}>Connecting Providers & Patients</h1>
-                <p className="text-xl text-[#333333] text-left">Greater efficiency to realize the promises of value-based care </p>
-                <div className="flex gap-6 mt-20">
-                    <Link href={'/'} className="text-center text-[#00BFFF] hover:text-white font-semibold text-lg bg-[#ffffff] hover:bg-[#00BFFF] py-3 px-8 rounded-full border-[2px] border-[#00BFFF] transition-all duration-300 flex items-center gap-2 max-w-[248px] min-w-[248px]">See What We Do <FaArrowDown /></Link>
-                    <Link href={'/'} className="text-center text-[#00BFFF] hover:text-white font-semibold text-lg bg-[#ffffff] hover:bg-[#00BFFF] py-3 px-8 rounded-full border-[2px] border-[#00BFFF] transition-all duration-300 max-w-[248px] min-w-[248px]">Schedule A Call</Link>
+            <div className="wrapper mx-auto py-16 md:py-24 text-center">
+                <h1 className={`text-5xl leading-[1.1] md:text-8xl font-extrabold text-[#333333] mb-4 md:mb-6 text-left ${roboto.className}`}>Connecting Providers & Patients</h1>
+                <p className="md:text-xl text-[#333333] text-left">Greater efficiency to realize the promises of value-based care </p>
+                <div className="flex flex-col md:flex-row gap-4 md:gap-6 mt-12">
+                    <Link href={'/'} className="text-center text-[#00BFFF] hover:text-white font-semibold md:text-lg bg-[#ffffff] hover:bg-[#00BFFF] py-2 md:py-3 px-4 md:px-8 rounded-full border-[2px] border-[#00BFFF] transition-all duration-300 flex justify-center items-center gap-2 max-w-[212px] md:max-w-[248px] md:min-w-[248px]">See What We Do <FaArrowDown /></Link>
+                    <Link href={'/'} className="text-center text-[#00BFFF] hover:text-white font-semibold md:text-lg bg-[#ffffff] hover:bg-[#00BFFF] py-2 md:py-3 px-4 md:px-8 rounded-full border-[2px] border-[#00BFFF] transition-all duration-300 max-w-[212px] md:max-w-[248px] md:min-w-[248px]">Schedule A Call</Link>
                 </div>
             </div>
             {/* <Image style={{ position: 'absolute', top: '292px', zIndex: -1 }} src={'/hero-img-opt.png'} alt="hero-image" width={1519} height={972} /> */}
@@ -72,19 +50,19 @@ const InfoSection = () => {
 
 const HealowServices = () => {
     return (
-        <section id="healow-services" className="healow-services min-h-[90rem] mt-12 p-4">
+        <section id="healow-services" className="healow-services min-h-[90rem] sm:min-h-[128rem] lg:min-h-[90rem] my-12 p-4">
             <h4 className="text-4xl text-center font-bold">What healow Aware Offers</h4>
             <div className="wrapper mx-auto relative">
-                <div className="z-[1] healow_services__divs absolute top-0 left-0">
-                    <Image className="relative" src={'/Online-Awareness-Image-optimized.png'} alt="Online-Awareness-Image" height={580} width={536} />
+                <div className="z-[1] healow_services__divs absolute mx-auto sm:top-8 top-8 lg:top-0 left-0 right-0 md:right-auto">
+                    <Image className="relative mx-auto h-auto w-[536px]" src={'/Online-Awareness-Image-optimized.png'} alt="Online-Awareness-Image" height={580} width={536} />
                     <div className="healow_services__divs__text">
                         <p>eClinicalWorks aids in creating strong online presences for both startup and established practices. We offer support for Google My Business™, Google Analytics™, social media management, and SEO.</p>
                         <Link href={'/'} className="text-center text-[#00BFFF] hover:text-white font-semibold bg-[#ffffff] hover:bg-[#00BFFF] py-2 px-8 rounded-full border-[2px] border-[#00BFFF] transition-all duration-300 flex items-center gap-2">Learn More <FaArrowUpRightFromSquare /></Link>
                     </div>
                 </div>
 
-                <div className="z-[1] healow_services__divs absolute top-[20rem] right-0">
-                    <Image className="relative" src={'/In-Office-Awareness-Image-3-optimized.png'} alt="In-Office-Awareness-Image-3" height={564} width={538} />
+                <div className="z-[1] healow_services__divs absolute mx-auto sm:top-[34rem] top-[28rem] lg:top-[20rem] left-0 right-0 md:left-auto">
+                    <Image className="relative mx-auto h-auto w-[538px]" src={'/In-Office-Awareness-Image-3-optimized.png'} alt="In-Office-Awareness-Image-3" height={564} width={538} />
                     <div className="healow_services__divs__text">
                         <p>Practices enhance the patient experience with healow CHECK-IN™, Kiosk, Patient Portal, eClinicalMessenger®, healow TeleVisits™, and healow apps. Share your services through take-home marketing materials in English or Spanish.</p>
                         <Link href={'/'} className="text-center text-[#00BFFF] hover:text-white font-semibold bg-[#ffffff] hover:bg-[#00BFFF] py-2 px-8 rounded-full border-[2px] border-[#00BFFF] transition-all duration-300 flex items-center gap-2">Learn More <FaArrowUpRightFromSquare /></Link>
@@ -92,8 +70,8 @@ const HealowServices = () => {
                     </div>
                 </div>
 
-                <div className="z-[1] healow_services__divs absolute top-[40rem] left-0">
-                    <Image className="relative" src={'/Product-Optimization-Image-optimized.png'} alt="Product-Optimization-Image" height={580} width={515} />
+                <div className="z-[1] healow_services__divs absolute mx-auto sm:top-[68rem] top-[58rem] lg:top-[40rem] left-0 right-0 md:right-auto">
+                    <Image className="relative mx-auto h-auto w-[515px]" src={'/Product-Optimization-Image-optimized.png'} alt="Product-Optimization-Image" height={580} width={515} />
                     <div className="healow_services__divs__text">
                         <p>Strengthen your practice by understanding your patients and providers. Our healow team can enhance patient-practice relationships, whether you&apos;re new to our tools or not. We offer on-site and remote optimization services.</p>
                         <Link href={'/'} className="text-center text-[#00BFFF] hover:text-white font-semibold bg-[#ffffff] hover:bg-[#00BFFF] py-2 px-8 rounded-full border-[2px] border-[#00BFFF] transition-all duration-300 flex items-center gap-2">Learn More <FaArrowUpRightFromSquare /></Link>
@@ -101,8 +79,8 @@ const HealowServices = () => {
                     </div>
                 </div>
 
-                <div className="z-[1] healow_services__divs absolute top-[60rem] right-0">
-                    <Image className="relative" src={'/Patient-Interaction-Feedback2-optimized.png'} alt="Patient-Interaction-Feedback2" height={563} width={563} />
+                <div className="z-[1] healow_services__divs absolute mx-auto sm:top-[98rem] top-[82rem] lg:top-[60rem] left-0 right-0 md:left-auto">
+                    <Image className="relative mx-auto h-auto w-[563px]" src={'/Patient-Interaction-Feedback2-optimized.png'} alt="Patient-Interaction-Feedback2" height={563} width={563} />
                     <div className="healow_services__divs__text">
                         <p>Our consultants assist patients in using Patient Portal, healow apps, health trackers, and streamline the appointment process with healow CHECK-IN™ and Kiosk. Educating patients in the office improves engagement and supports your front-office staff.</p>
                         <Link href={'/'} className="text-center text-[#00BFFF] hover:text-white font-semibold bg-[#ffffff] hover:bg-[#00BFFF] py-2 px-8 rounded-full border-[2px] border-[#00BFFF] transition-all duration-300 flex items-center gap-2">Learn More <FaArrowUpRightFromSquare /></Link>
@@ -120,11 +98,11 @@ const HealowInAction = () => {
         <section id="healow-services" className="healow-services mt-20 p-4">
             <div className="wrapper mx-auto relative">
                 <h4 className="text-4xl text-center font-bold">healow in Action</h4>
-                <div className="flex items-center justify-around my-16">
-                    <div className="w-[45%]">
+                <div className="flex flex-col gap-8 md:gap-0 md:flex-row items-center justify-around my-16">
+                    <div className="w-[90%] md:w-[45%]">
                         <iframe className="w-full aspect-video" src="https://www.youtube-nocookie.com/embed/JOIfQpTUMsE?controls=0&rel=0&playsinline=0&modestbranding=0&autoplay=0&enablejsapi=1&origin=https%3A%2F%2Faware.healow.com&widgetid=1"></iframe>
                     </div>
-                    <div className="w-[45%]">
+                    <div className="w-[90%] md:w-[45%]">
                         <iframe className="w-full aspect-video" src="https://www.youtube-nocookie.com/embed/KKzomzpY5Lg?controls=0&rel=0&playsinline=0&modestbranding=0&autoplay=0&enablejsapi=1&origin=https%3A%2F%2Faware.healow.com&widgetid=1"></iframe>
                     </div>
                 </div>
@@ -135,16 +113,16 @@ const HealowInAction = () => {
 
 const Experties = () => {
     return (
-        <section id="healow-expertise" className="healow_expertise bg-[#97defb] relative py-40">
+        <section id="healow-expertise" className="healow_expertise bg-[#97defb] relative py-24 pb-16 md:py-40">
             <div className="custom-shape-divider-top-1697491937">
                 <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
                     <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" className="shape-fill"></path>
                 </svg>
             </div>
 
-            <div className="p-4">
+            <div className="p-4 md:py-16">
                 <div className="wrapper mx-auto relative">
-                    <h4 className="text-4xl text-center font-bold my-4">Expertise in the areas where it is most needed</h4>
+                    <h4 className="text-4xl text-center font-bold my-4 mb-6 md:mb-4">Expertise in the areas where it is most needed</h4>
 
                     <div className="healow_expertise__grid">
                         <div className="p-6 pt-8 relative card">
@@ -255,7 +233,7 @@ const Testimonials = () => {
         <div className="relative">
             <div className="spacer layer2"></div>
             <section id="testimonials" className="testimonials bg-[#4EC2E0] pb-8">
-                <div className="wrapper mx-auto relative">
+                <div className="wrapper mx-auto relative pt-12">
                     <h4 className="text-4xl text-center font-bold">What Our Customers Say</h4>
                     <TestimonialSlider />
                 </div>
