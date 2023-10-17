@@ -10,7 +10,7 @@ export default function Home() {
       <Experties />
       <HealowServices />
       <Testimonials />
-      {/* <HealowInAction /> */}
+      <HealowInAction />
     </main>
   )
 }
