@@ -303,5 +303,5 @@
 }
 
 .footer>div.wrapper {
-  @apply flex justify-between items-end py-12;
+  @apply flex flex-col md:flex-row justify-between items-center md:items-end py-8 md:py-12;
 }

@@ -254,22 +254,22 @@ const Footer = () => {
         <>
             <div className="spacer layer1"></div>
 
-            <footer className="footer -mt-40 p-8">
+            <footer className="footer -mt-60 lg:-mt-40 p-8">
                 <div className="wrapper mx-auto">
-                    <div className="left">
+                    <div className="left text-center md:text-left mb-8 md:mb-0">
                         <div className="text-2xl font-semibold mb-2">
                             Useful Links
                         </div>
                         <ul>
-                            <li><Link href={'#'}>Online Awareness</Link></li>
-                            <li><Link href={'#'}>In-Office Awareness</Link></li>
-                            <li><Link href={'#'}>Optimization & Staff Readiness</Link></li>
-                            <li><Link href={'#'}>Patient Education & Interaction</Link></li>
+                            <li><Link className="hover:text-[#00BFFF] transition-all duration-300" href={'#'}>Online Awareness</Link></li>
+                            <li><Link className="hover:text-[#00BFFF] transition-all duration-300" href={'#'}>In-Office Awareness</Link></li>
+                            <li><Link className="hover:text-[#00BFFF] transition-all duration-300" href={'#'}>Optimization & Staff Readiness</Link></li>
+                            <li><Link className="hover:text-[#00BFFF] transition-all duration-300" href={'#'}>Patient Education & Interaction</Link></li>
                         </ul>
                         <p className="mt-12">Copyright © 2022, healow. All rights reserved.</p>
                     </div>
 
-                    <div className="right flex flex-col items-end gap-2">
+                    <div className="right flex flex-col items-center md:items-end gap-2">
                         <Link href={'/'}>
                             <Image priority={true} src={'/healow-brandmark.png'} alt="healow-brandmark" height={50} width={50}></Image>
                         </Link>
@@ -277,12 +277,12 @@ const Footer = () => {
                             Follow Us On
                         </div>
                         <ul className="flex gap-4 justify-end text-2xl">
-                            <li><Link href={'#'}><FaFacebook /></Link></li>
-                            <li><Link href={'#'}><FaTwitter /></Link></li>
-                            <li><Link href={'#'}><FaInstagram /></Link></li>
-                            <li><Link href={'#'}><FaLinkedin /></Link></li>
+                            <li><Link className="hover:text-[#00BFFF] transition-all duration-300" href={'#'}><FaFacebook /></Link></li>
+                            <li><Link className="hover:text-[#00BFFF] transition-all duration-300" href={'#'}><FaTwitter /></Link></li>
+                            <li><Link className="hover:text-[#00BFFF] transition-all duration-300" href={'#'}><FaInstagram /></Link></li>
+                            <li><Link className="hover:text-[#00BFFF] transition-all duration-300" href={'#'}><FaLinkedin /></Link></li>
                         </ul>
-                        <p className="mt-10"><Link className="underline underline-offset-2" href={'/'}>Privacy Policy</Link> | <Link className="underline underline-offset-2" href={'/'}>Terms of use</Link> | <Link className="underline underline-offset-2" href={'/'}>Your Privacy Choices</Link></p>
+                        <p className="mt-10 text-center md:text-left"><Link className="underline underline-offset-2 hover:text-[#00BFFF] transition-all duration-300" href={'/'}>Privacy Policy</Link> | <Link className="underline underline-offset-2 hover:text-[#00BFFF] transition-all duration-300" href={'/'}>Terms of use</Link> | <Link className="underline underline-offset-2 hover:text-[#00BFFF] transition-all duration-300" href={'/'}>Your Privacy Choices</Link></p>
                     </div>
                 </div>
             </footer>
